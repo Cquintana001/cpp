@@ -6,6 +6,7 @@ Contact::Contact(std::string firstName,std::string lastName,std::string nickname
     this->_firstName = firstName;
     this->_lastName = lastName;
     this->_darkestSecret = darkestSecret;
+    this->_phoneNumber = phoneNumber;
     std::cout<< "Contacto instanciado "<< this->_firstName<<std::endl;
 }
 Contact::Contact(){std::cout<< "Contact default constructor called"<<std::endl;}

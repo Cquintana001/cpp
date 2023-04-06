@@ -7,7 +7,7 @@ class PhoneBook
 
     private:
         Contact list[8];
-
+        int     index;
     public:
         PhoneBook();
         ~PhoneBook();

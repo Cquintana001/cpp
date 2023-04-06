@@ -8,11 +8,13 @@ bool is_digits(const std::string &str)
 }
 PhoneBook::PhoneBook()
 {
+    this->index = 0;
     std::cout<<"PhoneBook default constructor called"<<std::endl;
 
 }
 PhoneBook::~PhoneBook()
 {
+   
      std::cout<<this->list[0].getFirstName()<<"destruido"<<std::endl;
     std::cout<<"PhoneBook default destructor called"<<std::endl;
 }
@@ -48,14 +50,17 @@ void PhoneBook::add()
     std::getline(std::cin,secret);
     std::cout<<std::endl;
     int tel = std::atoi(telephone.c_str());
-    Contact contact = Contact(name, last, nickname,tel ,secret);
-    this->list[0] = contact;
+    //Contact contact = Contact(name, last, nickname,tel ,secret);
+    if(index == 8)
+        index = 0;
+    this->list[index] = Contact(name, last, nickname,tel ,secret);
+    index++;
 }
 void PhoneBook::search(int index)
 {
 
 
-    std::cout<<"Ha entrado a SEARCH con "<<index<<std::endl;
+    std::cout<<this->list[0].getFirstName()<<index<<std::endl;
 
 }
 void PhoneBook::exit()
