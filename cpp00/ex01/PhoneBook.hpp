@@ -8,6 +8,7 @@ class PhoneBook
     private:
         Contact list[8];
         int     index;
+        bool    is_full;
     public:
         PhoneBook();
         ~PhoneBook();
