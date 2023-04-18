@@ -13,7 +13,7 @@ class PhoneBook
         PhoneBook();
         ~PhoneBook();
         void add();
-        void search(int index);
+        void search();
         void exit();
 
 };

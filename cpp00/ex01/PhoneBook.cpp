@@ -59,17 +59,16 @@ void PhoneBook::add()
     }
     this->list[index] = Contact(name, last, nickname,tel ,secret);
     
-    for (int i = 0; (is_full == false && i <= index) || (is_full == true && i < 4); i++ )
-        std::cout <<"\n"<< this->list[i].getFirstName() << "\n";
 
     index++;
 }
 
-void PhoneBook::search(int index)
+void PhoneBook::search()
 {
+    for (int i = 0; (is_full == false && i < index) || (is_full == true && i < 4); i++ )
+     this->list[i].displayContact(i);
 
 
-    std::cout<<this->list[0].getFirstName()<<" - "<<index<<std::endl;
 
 }
 void PhoneBook::exit()

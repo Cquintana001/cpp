@@ -17,7 +17,7 @@ public:
     Contact();
     void setFirstName(std::string firstName1);
     std::string getFirstName(); 
-   
+   void displayContact(int index);
 
 };
 #endif

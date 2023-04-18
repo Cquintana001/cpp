@@ -14,7 +14,7 @@ int main()
     if(cmd == "ADD")
         agenda.add();
     else if(cmd == "SEARCH")
-        agenda.search(1);
+        agenda.search();
     else
         std::cout<<"Comando incorrecto vuelva a intentarlo."<<std::endl;
     
