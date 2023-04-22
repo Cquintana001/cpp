@@ -1,7 +1,7 @@
 #include "PhoneBook.hpp"
 #include <iostream>
 #include <cstdlib>
-
+#include <limits.h>
 bool is_digits(const std::string &str)
 {
     return str.find_first_not_of("0123456789") == std::string::npos;
@@ -10,14 +10,10 @@ PhoneBook::PhoneBook()
 {
     this->index = 0;
     this->is_full = false;
-    std::cout<<"PhoneBook default constructor called"<<std::endl;
 
 }
 PhoneBook::~PhoneBook()
 {
-   
-     std::cout<<this->list[0].getFirstName()<<"destruido"<<std::endl;
-    std::cout<<"PhoneBook default destructor called"<<std::endl;
 }
 
 void PhoneBook::add()
@@ -52,7 +48,7 @@ void PhoneBook::add()
     std::cout<<std::endl;
     int tel = std::atoi(telephone.c_str());
     //Contact contact = Contact(name, last, nickname,tel ,secret);
-    if(index == 4 )
+    if(index == 8 )
     {    
         index = 0;
         is_full = true;
@@ -65,16 +61,20 @@ void PhoneBook::add()
 
 void PhoneBook::search()
 {
-    for (int i = 0; (is_full == false && i < index) || (is_full == true && i < 4); i++ )
+    std::cout << " ___________________________________________ " << std::endl;
+	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
+	std::cout << "|----------|----------|----------|----------|" << std::endl;
+    for (int i = 0; (is_full == false && i < index) || (is_full == true && i < 8); i++ )
      this->list[i].displayContact(i);
+    std::cout << "|__________|__________|__________|__________|" << std::endl;
+    std::cout << "Write an index:" << std::endl;
+    std::string index2; 
+    std::getline(std::cin,index2);
+    long index1 = std::atof(index2.c_str());
+    if((is_full == true && index1>7 )||(is_full == false && index1>index ) || INT_MIN>=index1 ||index1>=INT_MAX)
+        std::cout << "The contact doesn't exist" << std::endl;
+    else
+        this->list[index1].showContact(index1);
 
-
-
-}
-void PhoneBook::exit()
-{
-
-
-    std::cout<<"Ha entrado a EXIT"<<std::endl;
 
 }

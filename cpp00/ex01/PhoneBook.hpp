@@ -14,8 +14,6 @@ class PhoneBook
         ~PhoneBook();
         void add();
         void search();
-        void exit();
-
 };
 
 #endif

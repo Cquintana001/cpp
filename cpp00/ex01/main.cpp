@@ -9,15 +9,14 @@ int main()
     cmd =""; 
     while(cmd !="EXIT")
     {
-    std::cout<<"Introduzca un comando"<<std::endl;
+    std::cout<<"Enter a command"<<std::endl;
     std::getline(std::cin,cmd);
     if(cmd == "ADD")
         agenda.add();
     else if(cmd == "SEARCH")
         agenda.search();
-    else
-        std::cout<<"Comando incorrecto vuelva a intentarlo."<<std::endl;
+    else if(cmd !="EXIT")
+        std::cout<<"Command not valid. Try again."<<std::endl;
     
     }
-    //agenda.exit(); 
 }

@@ -20,8 +20,7 @@ $(NAME): $(OBJS)
 
 
 fclean : clean
-
-	rm $(NAME)
+	rm -f $(NAME)
 clean:
 	rm -f $(OBJS)
 re:	fclean all
