@@ -12,6 +12,7 @@ class Weapon
 
     std::string const &getType();
     void setType(std::string string);
+    Weapon(std::string name);
 };
 
 
