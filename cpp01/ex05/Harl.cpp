@@ -12,22 +12,22 @@ Harl::~Harl(void)
 
 void Harl::debug(void)
 {
-	std::cout << "I just realized my burger order is longer than my shopping list." << std::endl;
+	std::cout << "Debug: I just realized my burger order is longer than my shopping list." << std::endl;
 }
 
 void Harl::info(void)
 {
-	std::cout << "I'm glad this burger place doesn't charge me for extra napkins." << std::endl;
+	std::cout << "Info: I'm glad this burger place doesn't charge me for extra napkins." << std::endl;
 }
 
 void Harl::warning(void)
 {
-	std::cout << "I always check my order twice, but if it's wrong again, I'm done with this place." << std::endl;
+	std::cout << "Warning: I always check my order twice, but if it's wrong again, I'm done with this place." << std::endl;
 }
 
 void Harl::error(void)
 {
-	std::cout << "You gave me the wrong burger again? That's it, I'm going to the competition." << std::endl;
+	std::cout << "Error: You gave me the wrong burger again? That's it, I'm going to the competition." << std::endl;
 }
 
 void Harl::complain(std::string level)
