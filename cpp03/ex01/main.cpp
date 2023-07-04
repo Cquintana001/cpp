@@ -3,13 +3,13 @@
 
 int main( void )
 {
-    ScavTrap ash( "Ash" );
-    ScavTrap ash2( ash );
+    ScavTrap carlos( "Carlos" );
+    ScavTrap carlos2( carlos );
 
-    ash.attack( "the air" );
-    ash.takeDamage( 10 );
-    ash.beRepaired( 10 );
-    ash.guardGate();
+    carlos.attack( "the air" );
+    carlos.takeDamage( 10 );
+    carlos2.beRepaired( 10 );
+    carlos2.guardGate();
 
-    return EXIT_SUCCESS;
+    return 0;
 }
